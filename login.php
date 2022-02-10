@@ -1,3 +1,4 @@
+
 <?php
 /**
  * Created by PhpStorm.
@@ -9,8 +10,10 @@
     you can substitue the span of reauth email for a input with the email and
     include the remember me checkbox
     -->
-<html>
-<head>
+
+<!DOCTYPE html>
+<html lang="en">
+<head title="Login">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/login.css"/>
 </head>
@@ -19,7 +22,7 @@
 
 <div class="container">
     <div class="card card-container">
-        <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"/>
+        <img id="profile-img" alt="text" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"/>
         <p id="profile-name" class="profile-name-card">Login For Hotel Management</p>
         <br>
         <div class="result">
