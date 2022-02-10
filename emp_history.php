@@ -29,7 +29,7 @@
                     $emp_result = mysqli_query($connection,$emp);
                     $employee = mysqli_fetch_assoc($emp_result);
                     ?>
-                    <p><b>Employee Name: </b> <?php echo $employee['emp_name']; ?></p>
+                    <p><strong>Employee Name: </strong> <?php echo $employee['emp_name']; ?></p>
                     <p><strong>Employee Salary: </strong> <?php echo $employee['salary'].'/-'; ?></p>
                     <table class="table table-striped table-bordered table-responsive" cellspacing="0" width="100%"
                            id="rooms">
