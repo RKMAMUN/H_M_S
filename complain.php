@@ -78,6 +78,7 @@
                     }
                     ?>
                     <table class="table table-striped table-bordered table-responsive", id="rooms">
+                        <caption>Complains</caption>
                         <thead>
                         <tr>
                             <th scope="col">Sr. No</th>
@@ -124,6 +125,7 @@
 
                         </tbody>
                     </table>
+
                 </div>
             </div>
 
