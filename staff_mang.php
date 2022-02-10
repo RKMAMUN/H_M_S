@@ -77,7 +77,7 @@
                                            class="btn btn-danger" onclick="return confirm('Are you Sure?')"><em
                                                     class="fa fa-trash"></em></a>
                                         <a href='index.php?emp_history&empid=<?php echo $staff['emp_id']; ?>'
-                                           class="btn btn-success" title="Employee Histery"><i class="fa fa-eye"></i></a>
+                                           class="btn btn-success" title="Employee Histery"><em class="fa fa-eye"></em></a>
                                     </td>
                                 </tr>
 
