@@ -77,16 +77,16 @@
                             </div>";
                     }
                     ?>
-                    <table class="table table-striped table-bordered table-responsive" cellspacing="0" width="100%" id="rooms">
+                    <table class="table table-striped table-bordered table-responsive", id="rooms">
                         <thead>
                         <tr>
-                            <th>Sr. No</th>
-                            <th>Complainant Name</th>
-                            <th>Type Of Complaint</th>
-                            <th>Complaint</th>
-                            <th>Created Date</th>
-                            <th>Resolve</th>
-                            <th>Budget</th>
+                            <th scope="col">Sr. No</th>
+                            <th scope="col">Complainant Name</th>
+                            <th scope="col">Type Of Complaint</th>
+                            <th scope="col">Complaint</th>
+                            <th scope="col">Created Date</th>
+                            <th scope="col">Resolve</th>
+                            <th scope="col">Budget</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -112,7 +112,7 @@
                                         }
                                         ?>
                                     </td>
-                                    <th><?php echo $complaint['budget'] ?></th>
+                                    <th scope="col"><?php echo $complaint['budget'] ?></th>
 
 
                                 </tr>
