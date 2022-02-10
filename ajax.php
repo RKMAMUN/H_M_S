@@ -1,4 +1,5 @@
 <?php
+global $connection;
 include_once 'db.php';
 session_start();
 
@@ -9,7 +10,7 @@ if (isset($_POST['login'])) {
     if (!$email && !$password) {
         header('Location:login.php?empty');
     } else {
-        $password = md5($password);
+        $password = sha1($password);
         $query = "SELECT * FROM user WHERE username = '$email' OR email='$email' AND password='$password'";
         $result = mysqli_query($connection, $query);
         if (mysqli_num_rows($result) == 1) {
