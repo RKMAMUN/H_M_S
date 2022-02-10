@@ -37,6 +37,7 @@
                     ?>
                     <table class="table table-striped table-bordered table-responsive" cellspacing="0" width="100%"
                            id="rooms">
+                        <caption>Room Manage</caption>
                         <thead>
                         <tr>
                             <th>Room No</th>
@@ -91,7 +92,7 @@
 
                                         <button title="Edit Room Information" data-toggle="modal"
                                                 data-target="#editRoom" data-id="<?php echo $rooms['room_id']; ?>"
-                                                id="roomEdit" class="btn btn-info"><i class="fa fa-pencil"></i></button>
+                                                id="roomEdit" class="btn btn-info"><em class="fa fa-pencil"></em></button>
                                         <?php
                                         if ($rooms['status'] == 1) {
                                             echo '<button title="Customer Information" data-toggle="modal" data-target="#cutomerDetailsModal" data-id="' . $rooms['room_id'] . '" id="cutomerDetails" class="btn btn-warning"><i class="fa fa-eye"></i></button>';
@@ -99,8 +100,8 @@
                                         ?>
 
                                         <a href="ajax.php?delete_room=<?php echo $rooms['room_id']; ?>"
-                                           class="btn btn-danger" onclick="return confirm('Are you Sure?')"><i
-                                                    class="fa fa-trash" alt="delete"></i></a>
+                                           class="btn btn-danger" onclick="return confirm('Are you Sure?')"><em
+                                                    class="fa fa-trash" alt="delete"></em></a>
                                     </td>
                                 </tr>
                             <?php }
@@ -228,6 +229,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <table class="table table-responsive table-bordered">
+                                <caption>customer Details</caption>
                                 <thead>
                                 <tr>
                                     <th>Title</th>
@@ -287,6 +289,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <table class="table table-responsive table-bordered">
+                                <caption>Modal</caption>
                                 <thead>
                                 <tr>
                                     <th>Name</th>
@@ -352,6 +355,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <table class="table table-responsive table-bordered">
+                                <caption>Check out</caption>
                                 <thead>
                                 <tr>
                                     <th>Name</th>
