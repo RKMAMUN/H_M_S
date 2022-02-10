@@ -20,6 +20,7 @@
                 <div class="panel-heading">Employee History</div>
                 <div class="panel-body">
                     <?php
+                    global $connection;
                     if(isset($_GET['empid'])){
                         $emp_id = $_GET['empid'];
                     }else{
@@ -29,9 +30,9 @@
                     $emp_result = mysqli_query($connection,$emp);
                     $employee = mysqli_fetch_assoc($emp_result);
                     ?>
-                    <p><strong>Employee Name: </strong> <?php echo $employee['emp_name']; ?></p>
+                    <p><b>Employee Name: </b> <?php echo $employee['emp_name']; ?></p>
                     <p><strong>Employee Salary: </strong> <?php echo $employee['salary'].'/-'; ?></p>
-                    <table class="table table-striped table-bordered table-responsive" cellspacing="0" width="100%"
+                    <table class="table table-striped table-bordered table-responsive"
                            id="rooms">
                         <caption>Employee history</caption>
                         <thead>
@@ -45,7 +46,7 @@
                         <tbody>
                         <?php
 
-                        //$staff_query = "SELECT * FROM staff  JOIN staff_type JOIN shift ON staff.staff_type_id =staff_type.staff_type_id ON shift.";
+
                         $staff_query = "SELECT * FROM emp_history NATURAL JOIN shift WHERE emp_id = '$emp_id' ORDER BY created_at DESC";
                         $staff_result = mysqli_query($connection, $staff_query);
 
@@ -93,7 +94,7 @@
 </div>    <!--/.main-->
 
 <?php
-//$staff_query = "SELECT * FROM staff  JOIN staff_type JOIN shift ON staff.staff_type_id =staff_type.staff_type_id ON shift.";
+
 $staff_query = "SELECT * FROM staff  NATURAL JOIN staff_type NATURAL JOIN shift";
 $staff_result = mysqli_query($connection, $staff_query);
 
@@ -119,7 +120,7 @@ if (mysqli_num_rows($staff_result) > 0) {
                                 <div class="panel panel-default">
                                     <div class="panel-heading">Employee Detail:</div>
                                     <div class="panel-body">
-                                        <form data-toggle="validator" role="form" action="functionmis.php"
+                                        <form data-toggle="validator" role="form" action="function_is.php"
                                               method="post">
                                             <div class="row">
                                                 <div class="form-group col-lg-6">
@@ -132,7 +133,7 @@ if (mysqli_num_rows($staff_result) > 0) {
                                                         $result = mysqli_query($connection, $query);
                                                         if (mysqli_num_rows($result) > 0) {
                                                             while ($staff = mysqli_fetch_assoc($result)) {
-                                                                //  echo '<option value=" ' . $staff['staff_type_id'] . ' "  selected  >' . $staff['staff_type'] . '</option>';
+
                                                                 echo '<option value="' . $staff['staff_type_id'] . '" ' . (($staff['staff_type_id'] == $staffGlobal['staff_type_id']) ? 'selected="selected"' : "") . '>' . $staff['staff_type'] . '</option>';
                                                             }
                                                         }
@@ -148,7 +149,7 @@ if (mysqli_num_rows($staff_result) > 0) {
                                                         $result = mysqli_query($connection, $query);
                                                         if (mysqli_num_rows($result) > 0) {
                                                             while ($shift = mysqli_fetch_assoc($result)) {
-                                                                // echo '<option value="' . $shift['shift_id'] . '">' . $shift['shift'] . ' - ' . $shift['shift_timing'] . '</option>';
+
                                                                 echo '<option value="' . $shift['shift_id'] . '" ' . (($shift['shift_id'] == $staffGlobal['shift_id']) ? 'selected="selected"' : "") . '>' . $shift['shift_timing'] . '</option>';
                                                             }
                                                         }
@@ -183,7 +184,7 @@ if (mysqli_num_rows($staff_result) > 0) {
 
                                                         if (mysqli_num_rows($result) > 0) {
                                                             while ($id_card_type = mysqli_fetch_assoc($result)) {
-                                                                //  echo '<option value="' . $id_card_type['id_card_type_id'] . '">' . $id_card_type['id_card_type'] . '</option>';
+
                                                                 echo '<option  value="' . $id_card_type['id_card_type_id'] . '" ' . (($id_card_type['id_card_type_id'] == $staffGlobal['id_card_type']) ? 'selected="selected"' : "") . '>' . $id_card_type['id_card_type'] . '</option>';
                                                             }
                                                         }
@@ -267,7 +268,7 @@ if (mysqli_num_rows($staff_result) > 0) {
                                                         $result = mysqli_query($connection, $query);
                                                         if (mysqli_num_rows($result) > 0) {
                                                             while ($shift = mysqli_fetch_assoc($result)) {
-                                                                // echo '<option value="' . $shift['shift_id'] . '">' . $shift['shift'] . ' - ' . $shift['shift_timing'] . '</option>';
+                                                                
                                                                 echo '<option value="' . $shift['shift_id'] . '" ' . (($shift['shift_id'] == $staffGlobal['shift_id']) ? 'selected="selected"' : "") . '>' . $shift['shift_timing'] . '</option>';
                                                             }
                                                         }
