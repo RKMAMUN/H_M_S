@@ -13,10 +13,12 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head title="Login">
+<head>
+<title>Login</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/login.css"/>
 </head>
+
 <body>
 
 
