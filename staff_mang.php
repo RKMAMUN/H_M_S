@@ -35,7 +35,6 @@
                     ?>
                     <table class="table table-striped table-bordered table-responsive" cellspacing="0" width="100%"
                            id="rooms">
-                        <caption>staff manage</caption>
                         <thead>
                         <tr>
                             <th>Sr. No</th>
@@ -73,12 +72,12 @@
                                         <button data-toggle="modal"
                                                 data-target="#empDetail<?php echo $staff['emp_id']; ?>"
                                                 data-id="<?php echo $staff['emp_id']; ?>" id="editEmp"
-                                                class="btn btn-info"><em class="fa fa-pencil"></em></button>
-                                        <a href='functionmis.php?empid=<?php echo $staff['emp_id']; ?>'
+                                                class="btn btn-info"><i class="fa fa-pencil"></i></button>
+                                        <a href='function_is.php?empid=<?php echo $staff['emp_id']; ?>'
                                            class="btn btn-danger" onclick="return confirm('Are you Sure?')"><em
                                                     class="fa fa-trash"></em></a>
                                         <a href='index.php?emp_history&empid=<?php echo $staff['emp_id']; ?>'
-                                           class="btn btn-success" title="Employee Histery"><em class="fa fa-eye"></em></a>
+                                           class="btn btn-success" title="Employee Histery"><i class="fa fa-eye"></i></a>
                                     </td>
                                 </tr>
 
@@ -96,22 +95,18 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-sm-12">
-            <p class="back-link">MIS Developed by <a href="https://www.pcsaini.in">pcsaini</a></p>
-        </div>
-    </div>
+
 
 </div>    <!--/.main-->
 
 <?php
-//$staff_query = "SELECT * FROM staff  JOIN staff_type JOIN shift ON staff.staff_type_id =staff_type.staff_type_id ON shift.";
+
 $staff_query = "SELECT * FROM staff  NATURAL JOIN staff_type NATURAL JOIN shift";
 $staff_result = mysqli_query($connection, $staff_query);
 
 if (mysqli_num_rows($staff_result) > 0) {
     while ($staffGlobal = mysqli_fetch_assoc($staff_result)) {
-        $fullname = explode(" ", $staffGlobal['emp_name']);
+        $full_name = explode(" ", $staffGlobal['emp_name']);
         ?>
 
         <!-- Employee Detail-->
@@ -119,19 +114,19 @@ if (mysqli_num_rows($staff_result) > 0) {
             <div class="modal-dialog">
 
                 <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
+                <div class="modal_content">
+                    <div class="modal_header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Employee Detail</h4>
+                        <h4 class="modal_title">Employee Detail</h4>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal_body">
 
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">Employee Detail:</div>
                                     <div class="panel-body">
-                                        <form data-toggle="validator" role="form" action="functionmis.php"
+                                        <form data-toggle="validator" role="form" action="function_is.php"
                                               method="post">
                                             <div class="row">
                                                 <div class="form-group col-lg-6">
@@ -172,14 +167,14 @@ if (mysqli_num_rows($staff_result) > 0) {
 
                                                 <div class="form-group col-lg-6">
                                                     <label>First Name</label>
-                                                    <input type="text" value="<?php echo $fullname[0]; ?>"
+                                                    <input type="text" value="<?php echo $full_name[0]; ?>"
                                                            class="form-control" placeholder="First Name" id="first_name"
                                                            name="first_name" required>
                                                 </div>
 
                                                 <div class="form-group col-lg-6">
                                                     <label>Last Name</label>
-                                                    <input type="text" value="<?php echo $fullname[1]; ?>"
+                                                    <input type="text" value="<?php echo $full_name[1]; ?>"
                                                            class="form-control" placeholder="Last Name" id="last_name"
                                                            name="last_name" required>
                                                 </div>
@@ -257,12 +252,12 @@ if (mysqli_num_rows($staff_result) > 0) {
             <div class="modal-dialog">
 
                 <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
+                <div class="modal_content">
+                    <div class="modal_header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Change Shift</h4>
+                        <h4 class="modal_title">Change Shift</h4>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal_body">
 
                         <div class="row">
                             <div class="col-lg-12">
