@@ -176,7 +176,7 @@ select.form-control {
 .nav > li > a:hover, .nav > li > a:focus, .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
     text-decoration: none;
     background-color: rgba(255, 255, 255, 0.2);
-    background: none;
+
 }
 
 .dropdown-messages {
@@ -939,7 +939,6 @@ a.label:hover, a.label:focus {
 .sidebar {
     display: block;
     padding: 0;
-    display: none;
     box-shadow: none;
     background: #fff;
 }
@@ -961,7 +960,6 @@ a.label:hover, a.label:focus {
         bottom: 0;
         left: 0;
         z-index: 1000;
-        display: block;
         margin: 0;
         padding: 0;
         overflow-x: hidden;
