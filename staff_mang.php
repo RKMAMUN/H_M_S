@@ -72,10 +72,10 @@
                                         <button data-toggle="modal"
                                                 data-target="#empDetail<?php echo $staff['emp_id']; ?>"
                                                 data-id="<?php echo $staff['emp_id']; ?>" id="editEmp"
-                                                class="btn btn-info"><i class="fa fa-pencil"></i></button>
+                                                class="btn btn-info"><em class="fa fa-pencil"></em></button>
                                         <a href='functionmis.php?empid=<?php echo $staff['emp_id']; ?>'
-                                           class="btn btn-danger" onclick="return confirm('Are you Sure?')"><i
-                                                    class="fa fa-trash"></i></a>
+                                           class="btn btn-danger" onclick="return confirm('Are you Sure?')"><em
+                                                    class="fa fa-trash"></em></a>
                                         <a href='index.php?emp_history&empid=<?php echo $staff['emp_id']; ?>'
                                            class="btn btn-success" title="Employee Histery"><i class="fa fa-eye"></i></a>
                                     </td>
