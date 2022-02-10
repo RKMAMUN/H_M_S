@@ -10,7 +10,7 @@ if (isset($_POST['login'])) {
     if (!$email && !$password) {
         header('Location:login.php?empty');
     } else {
-        $password = sha1($password);
+        $password = hash('sha256', $password);
         $query = "SELECT * FROM user WHERE username = '$email' OR email='$email' AND password='$password'";
         $result = mysqli_query($connection, $query);
         if (mysqli_num_rows($result) == 1) {
