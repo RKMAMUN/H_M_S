@@ -30,9 +30,10 @@
                     $employee = mysqli_fetch_assoc($emp_result);
                     ?>
                     <p><b>Employee Name: </b> <?php echo $employee['emp_name']; ?></p>
-                    <p><b>Employee Salary: </b> <?php echo $employee['salary'].'/-'; ?></p>
+                    <p><strong>Employee Salary: </strong> <?php echo $employee['salary'].'/-'; ?></p>
                     <table class="table table-striped table-bordered table-responsive" cellspacing="0" width="100%"
                            id="rooms">
+                        <caption>Employee history</caption>
                         <thead>
                         <tr>
                             <th>Sr. No</th>
