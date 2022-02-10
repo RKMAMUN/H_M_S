@@ -214,6 +214,7 @@ if (isset($_GET['room_id'])){
                     <div class="col-lg-12">
                         <div class="alert bg-success alert-dismissable" role="alert"><em class="fa fa-lg fa-check-circle">&nbsp;</em>Room Successfully Booked</div>
                         <table class="table table-striped table-bordered table-responsive">
+                            <caption>Model Content</caption>
                             <thead>
                             <tr>
                                 <th>Name</th>
