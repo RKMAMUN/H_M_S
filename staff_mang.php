@@ -35,6 +35,7 @@
                     ?>
                     <table class="table table-striped table-bordered table-responsive" cellspacing="0" width="100%"
                            id="rooms">
+                        <caption>staff info</caption>
                         <thead>
                         <tr>
                             <th>Sr. No</th>
