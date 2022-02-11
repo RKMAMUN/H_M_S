@@ -5,6 +5,7 @@
  * Date: 10/21/17
  * Time: 4:16 PM
  */
+global $connection;
 include_once 'db.php';
 
 if (isset($_POST['login'])) {
